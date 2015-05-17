@@ -41,3 +41,7 @@ $selectionColor: #fff;
 @mixin bodyBackground() {
 	background: $backgroundColor;
 }
+
+$tablet-breakpoint: 778px;
+$desktop-breakpoint: 960px;
+$hd-breakpoint: 1200px;

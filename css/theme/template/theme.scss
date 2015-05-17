@@ -5,7 +5,7 @@
  *********************************************/
 
 body {
-	@include bodyBackground();
+	//@include bodyBackground();
 	background-color: $backgroundColor;
 }
 
@@ -35,7 +35,7 @@ body {
 
 .site-navigation {
   display: block;
-  font-family: 'arial', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 12px;
   font-weight: bold;
   height: 40px;

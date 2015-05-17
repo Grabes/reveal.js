@@ -15,7 +15,6 @@ html * {
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #002b36;
   background-color: #002b36; }
 
 .reveal {
@@ -38,7 +37,7 @@ body {
  *********************************************/
 .site-navigation {
   display: block;
-  font-family: 'arial', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 12px;
   font-weight: bold;
   height: 40px;

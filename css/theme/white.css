@@ -11,7 +11,6 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #fff;
   background-color: #fff; }
 
 .reveal {
@@ -34,7 +33,7 @@ body {
  *********************************************/
 .site-navigation {
   display: block;
-  font-family: 'arial', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 12px;
   font-weight: bold;
   height: 40px;

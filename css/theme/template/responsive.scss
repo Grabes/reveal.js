@@ -1,0 +1,72 @@
+// Phone Container
+@media only screen {
+  .page {
+    font-size: 1em
+  }
+  .reveal h1 {
+    font-size: 2em;
+  }
+  .reveal h2 {
+    font-size: 1.8em;
+  }
+  .reveal h3 {
+    font-size: 1.3em;
+  }
+  .reveal h4 {
+    font-size: 1em;
+  }
+}
+// Tablet Container
+@media only screen and (min-width: $tablet-breakpoint) {
+  .page {
+    font-size: 1em
+  }
+  .reveal h1 {
+    font-size: 2.2em;
+  }
+  .reveal h2 {
+    font-size: 2em;
+  }
+  .reveal h3 {
+    font-size: 1.3em;
+  }
+  .reveal h4 {
+    font-size: 1em;
+  }
+}
+// Desktop Container
+@media only screen and (min-width: $desktop-breakpoint) {
+  .page {
+      font-size: 1em
+  }
+  .reveal h1 {
+    font-size: 2.5em;
+  }
+  .reveal h2 {
+    font-size: 2em;
+  }
+  .reveal h3 {
+    font-size: 1.3em;
+  }
+  .reveal h4 {
+    font-size: 1em;
+  }
+}
+// HD Container
+@media only screen and (min-width: $hd-breakpoint) {
+  .page {
+    font-size: 2em
+  }
+  .reveal h1 {
+    font-size: 3.5em;
+  }
+  .reveal h2 {
+    font-size: 2.5em;
+  }
+  .reveal h3 {
+    font-size: 1.8em;
+  }
+  .reveal h4 {
+    font-size: 1em;
+  }
+}
