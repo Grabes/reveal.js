@@ -65,7 +65,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section class="page" data-state="page-1" id="page-1">
 					<h1>Mobideck</h1>
 					<h3>The Mobile Presentation</h3>
 					<p>
@@ -81,31 +81,31 @@
 				</section>
 
 				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
+				<section class="page" data-state="page-2" id="page-2">
+					<section class="page" data-state="page-2-1" id="page-2-1">
 						<h2>Horizontal Slides</h2>
 						<p>Slides can be nested inside of each other.</p>
 						<p>Use the <em>Space</em> key to navigate through all slides.</p>
 					</section>
-					<section>
+					<section class="page" data-state="page-2-2" id="page-2-2">
 						<h2>Nested Level 1</h2>
 						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
 					</section>
-					<section>
+					<section class="page" data-state="page-2-3" id="page-2-3">
 						<h2>Nested Level 2</h2>
 						<p>That's it, time to go back up.</p>
 						<br>
 					</section>
 				</section>
 
-				<section>
+				<section class="page" data-state="page-3" id="page-3">
 					<h2>Touch Optimized</h2>
 					<p>
 						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
 					</p>
 				</section>
 
-				<section>
+				<section class="page" data-state="page-4" id="page-4">
 					<h2>Marvelous List</h2>
 					<ul>
 						<li>No order here</li>
@@ -115,7 +115,7 @@
 					</ul>
 				</section>
 
-				<section>
+				<section class="page" data-state="page-5" id="page-5">
 					<h2>Fantastic Ordered List</h2>
 					<ol>
 						<li>One is smaller than...</li>
@@ -124,7 +124,7 @@
 					</ol>
 				</section>
 
-				<section>
+				<section class="page" data-state="page-6" id="page-6">
 					<h2>Tabular Tables</h2>
 					<table>
 						<thead>
@@ -154,7 +154,7 @@
 					</table>
 				</section>
 
-				<section>
+				<section class="page" data-state="page-7" id="page-7">
 					<h1>THE END</h1>
 				</section>
 
@@ -170,6 +170,15 @@
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				width: "100%",
+		    height: "100%",
+
+		    // Factor of the display size that should remain empty around the content
+		    margin: 0,
+
+		    // Bounds for smallest/largest possible scale to apply to content
+		    minScale: 0.5,
+		    maxScale: 1.5,
 				controls: false,
 				progress: true,
 				history: true,

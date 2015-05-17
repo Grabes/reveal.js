@@ -296,28 +296,21 @@ body {
  * SLIDES
  *********************************************/
 .reveal {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  -ms-touch-action: none;
-      touch-action: none; }
+  overflow: hidden; }
 
 .reveal .slides {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  overflow: visible;
-  z-index: 1;
-  text-align: center;
-  -webkit-perspective: 600px;
-          perspective: 600px;
-  -webkit-perspective-origin: 50% 40%;
-          perspective-origin: 50% 40%; }
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: perspective(600px);
+  transform: perspective(600px);
+  position: relative;
+  width: 800%;
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; }
 
 .reveal .slides > section {
   -ms-perspective: 600px; }
@@ -642,10 +635,25 @@ body {
  * OVERVIEW
  *********************************************/
 .reveal.overview .slides {
-  -webkit-perspective-origin: 50% 50%;
-          perspective-origin: 50% 50%;
-  -webkit-perspective: 700px;
-          perspective: 700px; }
+  height: 1000px;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: 25px;
+  padding: 240px 0 0;
+  -webkit-perspective: 600px;
+  perspective: 600px;
+  transition: none;
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  /* transform: scale(0.5); */
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  width: calc(200% - 100px); }
 
 .reveal.overview .slides section {
   height: 700px;
