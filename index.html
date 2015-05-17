@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>MobiDeck - The Blender Presentation Framework</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="description" content="A framework for easily creating beautiful presentations">
 		<meta name="author" content="Hakim El Hattab">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -16,9 +16,6 @@
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css" id="theme">
-
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -35,7 +32,35 @@
 	</head>
 
 	<body>
-
+		<nav id="navigation" class="site-navigation" role="navigation">
+		  <ul class="menu">
+		    <li class="menu-item"><a href="#" onclick="Reveal.toggleOverview();">Overview</a></li>
+		    <li class="menu-item"><a href="#">Menu</a>
+		      <ul class="dropdown">
+		        <li class="menu-item sub-menu"><a href="#">Slide 1</a></li>
+		        <li class="menu-item sub-menu"><a href="#">Slide 2</a></li>
+		        <li class="menu-item sub-menu"><a href="#">Slide 3</a></li>
+		        <li class="menu-item sub-menu"><a href="#">Slide 4</a></li>
+		        <li class="menu-item sub-menu"><a href="#">Slide 5</a></li>
+		      </ul>
+		    </li>
+		    <li class="menu-item"><a href="#">Help</a></li>
+		    <li class="menu-item"><a href="#">Search</a></li>
+		    <li class="menu-item"><a href="#">Share</a></li>
+		  </ul>
+		</nav>
+		<div class="fixed-control fixed-right">
+			<a href="#" class="navigate-next">next</a>
+		</div>
+		<div class="fixed-control fixed-left">
+			<a href="#" class="navigate-prev">prev</a>
+		</div>
+		<div class="fixed-control fixed-up">
+			<a href="#" class="navigate-up">up</a>
+		</div>
+		<div class="fixed-control fixed-down">
+			<a href="#" class="navigate-down">down</a>
+		</div>
 		<div class="reveal">
 
 			<!-- Any section element inside of this container is displayed as a slide -->
@@ -384,19 +409,17 @@ Reveal.addEventListener( 'customevent', function() {
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
+				controls: false,
 				progress: true,
 				history: true,
 				center: true,
+				embedded: true,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
 
 				// Optional reveal.js plugins
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/notes/notes.js', async: true }
 				]

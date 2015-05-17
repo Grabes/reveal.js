@@ -39,6 +39,66 @@ body {
   font-weight: inherit; }
 
 /*********************************************
+ * NAVIGATION
+ *********************************************/
+.site-navigation {
+  display: block;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  height: 40px; }
+
+.site-navigation ul {
+  background: #3498DB;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  overflow: hidden; }
+
+.site-navigation li {
+  color: #fff;
+  background: #3498DB;
+  display: block;
+  float: left;
+  margin: 0 2px 0 0;
+  padding: 12px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.site-navigation li a {
+  color: #fff;
+  text-decoration: none;
+  display: block; }
+
+.site-navigation li:hover {
+  transition: background 0.2s ease-in;
+  background: #52a6df;
+  cursor: pointer; }
+
+.site-navigation ul li ul {
+  background: #52a6df;
+  visibility: hidden;
+  float: left;
+  min-width: 150px;
+  position: absolute;
+  transition: visibility 0.65s ease-in;
+  margin-top: 12px;
+  left: 0;
+  z-index: 999; }
+
+.site-navigation ul li:hover > ul, .site-navigation ul li ul:hover {
+  visibility: visible; }
+
+.site-navigation ul li ul li {
+  clear: both;
+  padding: 5px 0 5px 18px;
+  width: 100%; }
+
+.site-navigation ul li ul li:hover {
+  background: #74b7e4; }
+
+/*********************************************
  * HEADERS
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
@@ -227,28 +287,28 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
+.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled, .fixed-control.fixed-left a, .fixed-control.fixed-left a.enabled, .fixed-control.fixed-left a.enabled {
   border-right-color: #a23; }
 
-.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled, .fixed-control.fixed-right a, .fixed-control.fixed-right a.enabled {
   border-left-color: #a23; }
 
-.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
+.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled, .fixed-control.fixed-up a, .fixed-control.fixed-up a.enabled {
   border-bottom-color: #a23; }
 
-.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
+.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled, .fixed-control.fixed-down a, .fixed-control.fixed-down a.enabled {
   border-top-color: #a23; }
 
-.reveal .controls div.navigate-left.enabled:hover {
+.reveal .controls div.navigate-left.enabled:hover, .fixed-control.fixed-left a.enabled:hover {
   border-right-color: #dd5567; }
 
-.reveal .controls div.navigate-right.enabled:hover {
+.reveal .controls div.navigate-right.enabled:hover, .fixed-control.fixed-right a.enabled:hover {
   border-left-color: #dd5567; }
 
-.reveal .controls div.navigate-up.enabled:hover {
+.reveal .controls div.navigate-up.enabled:hover, .fixed-control.fixed-up a.enabled:hover {
   border-bottom-color: #dd5567; }
 
-.reveal .controls div.navigate-down.enabled:hover {
+.reveal .controls div.navigate-down.enabled:hover, .fixed-control.fixed-down a.enabled:hover {
   border-top-color: #dd5567; }
 
 /*********************************************
