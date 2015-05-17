@@ -1642,28 +1642,28 @@
 			dom.wrapper.classList.add( 'overview' );
 			dom.wrapper.classList.remove( 'overview-deactivating' );
 
-			var horizontalSlides = dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR );
+			var verticalSlides = dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR );
 
-			for( var i = 0, len1 = horizontalSlides.length; i < len1; i++ ) {
-				var hslide = horizontalSlides[i],
+			for( var i = 0, len1 = verticalSlides.length; i < len1; i++ ) {
+				var hslide = verticalSlides[i],
 					hoffset = config.rtl ? -105 : 105;
 
-				hslide.setAttribute( 'data-index-h', i );
+				hslide.setAttribute( 'data-index-v', i );
 
 				// Apply CSS transform
 				transformElement( hslide, 'translateZ(-'+ depth +'px) translate(' + ( ( i - indexh ) * hoffset ) + '%, 0%)' );
 
 				if( hslide.classList.contains( 'stack' ) ) {
 
-					var verticalSlides = hslide.querySelectorAll( 'section' );
+					var horizontalSlides = hslide.querySelectorAll( 'section' );
 
-					for( var j = 0, len2 = verticalSlides.length; j < len2; j++ ) {
+					for( var j = 0, len2 = horizontalSlides.length; j < len2; j++ ) {
 						var verticalIndex = i === indexh ? indexv : getPreviousVerticalIndex( hslide );
 
-						var vslide = verticalSlides[j];
+						var vslide = horizontalSlides[j];
 
-						vslide.setAttribute( 'data-index-h', i );
-						vslide.setAttribute( 'data-index-v', j );
+						vslide.setAttribute( 'data-index-v', i );
+						vslide.setAttribute( 'data-index-h', j );
 
 						// Apply CSS transform
 						transformElement( vslide, 'translate(0%, ' + ( ( j - verticalIndex ) * 105 ) + '%)' );
@@ -3899,8 +3899,8 @@
 				deactivateOverview();
 
 				if( element.nodeName.match( /section/gi ) ) {
-					var h = parseInt( element.getAttribute( 'data-index-h' ), 10 ),
-						v = parseInt( element.getAttribute( 'data-index-v' ), 10 );
+					var h = parseInt( element.getAttribute( 'data-index-v' ), 10 ),
+						v = parseInt( element.getAttribute( 'data-index-h' ), 10 );
 
 					slide( h, v );
 				}

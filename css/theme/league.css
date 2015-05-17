@@ -40,8 +40,8 @@ body {
  *********************************************/
 .site-navigation {
   display: block;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 16px;
+  font-family: 'arial', sans-serif;
+  font-size: 12px;
   font-weight: bold;
   height: 40px;
   background: #3498DB; }
