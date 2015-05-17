@@ -44,6 +44,8 @@ body {
   font-size: 12px;
   font-weight: bold;
   height: 40px;
+  position: relative;
+  z-index: 999;
   background: #3498DB; }
 
 .site-navigation ul {

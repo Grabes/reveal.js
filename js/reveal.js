@@ -1651,7 +1651,7 @@
 				hslide.setAttribute( 'data-index-v', i );
 
 				// Apply CSS transform
-				transformElement( hslide, 'translateZ(-'+ depth +'px) translate(' + ( ( i - indexh ) * hoffset ) + '%, 0%)' );
+				transformElement( hslide, 'translateZ(-'+ depth +'px) translate(' + '0%, ' + ( ( i - indexh ) * hoffset ) + '%)' );
 
 				if( hslide.classList.contains( 'stack' ) ) {
 
@@ -1666,7 +1666,7 @@
 						vslide.setAttribute( 'data-index-h', j );
 
 						// Apply CSS transform
-						transformElement( vslide, 'translate(0%, ' + ( ( j - verticalIndex ) * 105 ) + '%)' );
+						transformElement( vslide, 'translate(' + ( ( j ) * 105 ) + '%, 0%)' );
 
 						// Navigate to this slide on click
 						vslide.addEventListener( 'click', onOverviewSlideClicked, true );
