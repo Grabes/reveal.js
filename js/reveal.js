@@ -1448,8 +1448,8 @@
 			// Layout the contents of the slides
 			layoutSlideContents( config.width, config.height, slidePadding );
 
-			dom.slides.style.width = size.width + 'px';
-			dom.slides.style.height = size.height + 'px';
+			//dom.slides.style.width = size.width + 'px';
+			//dom.slides.style.height = size.height + 'px';
 
 			// Determine scale of content to fit within available space
 			scale = Math.min( size.presentationWidth / size.width, size.presentationHeight / size.height );
@@ -1637,7 +1637,7 @@
 			var wasActive = dom.wrapper.classList.contains( 'overview' );
 
 			// Vary the depth of the overview based on screen size
-			var depth = window.innerWidth < 400 ? 1000 : 2500;
+			var depth = 0;//window.innerWidth < 400 ? 1000 : 2500;
 
 			dom.wrapper.classList.add( 'overview' );
 			dom.wrapper.classList.remove( 'overview-deactivating' );
