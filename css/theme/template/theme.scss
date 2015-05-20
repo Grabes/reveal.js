@@ -28,6 +28,29 @@ body {
 	font-weight: inherit;
 }
 
+/* -----
+SVG Icons
+----- */
+.svg-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: #ffffff;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease;
+}
+
+.svg-icon circle {
+  stroke: #ffffff;
+  stroke-width: 1;
+}
+
 
 /*********************************************
  * NAVIGATION

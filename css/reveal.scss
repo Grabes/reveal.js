@@ -772,8 +772,8 @@ body {
  *********************************************/
 
 .reveal.overview .slides {
-	position: relative;
-	height: 100%;
+	perspective-origin: 50% 50%;
+	perspective: 700px;
 }
 
 .reveal.overview .slides section {

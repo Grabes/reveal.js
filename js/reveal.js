@@ -819,8 +819,8 @@
 			document.addEventListener( 'mousewheel', onDocumentMouseScroll, false );
 		}
 		else {
-			//document.removeEventListener( 'DOMMouseScroll', onDocumentMouseScroll, false ); // FF
-			//document.removeEventListener( 'mousewheel', onDocumentMouseScroll, false );
+			document.removeEventListener( 'DOMMouseScroll', onDocumentMouseScroll, false ); // FF
+			document.removeEventListener( 'mousewheel', onDocumentMouseScroll, false );
 		}
 
 		// Rolling 3D links
@@ -1448,8 +1448,8 @@
 			// Layout the contents of the slides
 			layoutSlideContents( config.width, config.height, slidePadding );
 
-			//dom.slides.style.width = size.width + 'px';
-			//dom.slides.style.height = size.height + 'px';
+			dom.slides.style.width = size.width + 'px';
+			dom.slides.style.height = size.height + 'px';
 
 			// Determine scale of content to fit within available space
 			scale = Math.min( size.presentationWidth / size.width, size.presentationHeight / size.height );
@@ -1637,7 +1637,7 @@
 			var wasActive = dom.wrapper.classList.contains( 'overview' );
 
 			// Vary the depth of the overview based on screen size
-			var depth = 0;//window.innerWidth < 400 ? 1000 : 2500;
+			var depth = window.innerWidth < 400 ? 1000 : 2500;
 
 			dom.wrapper.classList.add( 'overview' );
 			dom.wrapper.classList.remove( 'overview-deactivating' );
@@ -3641,8 +3641,6 @@
 	 */
 	function onTouchStart( event ) {
 
-		if(preventSwipe(event.target)) return true;
-
 		touch.startX = event.touches[0].clientX;
 		touch.startY = event.touches[0].clientY;
 		touch.startCount = event.touches.length;
@@ -3665,8 +3663,6 @@
 	 * Handler for the 'touchmove' event.
 	 */
 	function onTouchMove( event ) {
-
-		if(preventSwipe(event.target)) return true;
 
 		// Each touch should only trigger one action
 		if( !touch.captured ) {
@@ -3951,14 +3947,6 @@
 
 	}
 
-function preventSwipe(target) {
-		while( target && typeof target.hasAttribute === 'function' ) {
-			if(target.hasAttribute('prevent-swipe')) return true;
-			target = target.parentNode;
-		}
-
-		return false;
-	}
 
 	// --------------------------------------------------------------------//
 	// ------------------------ PLAYBACK COMPONENT ------------------------//

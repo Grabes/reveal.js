@@ -642,8 +642,10 @@ body {
  * OVERVIEW
  *********************************************/
 .reveal.overview .slides {
-  position: relative;
-  height: 100%; }
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+  -webkit-perspective: 700px;
+          perspective: 700px; }
 
 .reveal.overview .slides section {
   overflow: hidden;
